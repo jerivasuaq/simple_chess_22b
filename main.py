@@ -1,18 +1,6 @@
-class Piece:
-    colour = "black"
-    row = -1
-    col = -1
-
-    def __init__(self, row, col, colour) -> None:
-        self.row = row
-        self.col = col
-        self.colour = colour
-
-    def move_to(self, row, col):
-        pass
-
-    def print(self):
-        pass
+from piece import Piece
 
 if __name__ == '__main__':
+    p = Piece(0,0,'w')
+
     print("Simple Chess")
