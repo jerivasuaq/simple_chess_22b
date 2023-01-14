@@ -5,7 +5,7 @@ class Board():
 
     def __init__(self) -> None:
         txt_board = [
-            "        ",
+            "RHBQKBHR",
             "PPPPPPPP",
             "        ",
             "        ",
@@ -13,7 +13,7 @@ class Board():
             "        ",
             "        ",
             "pppppppp",
-            "        ",
+            "rhbkqbhr",
         ]
 
         self.board = []
