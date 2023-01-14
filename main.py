@@ -26,13 +26,7 @@ if __name__ == '__main__':
     for row in range(8):
         for col in range(8):
             c = txt_board[row][col]
-            if c == 'p':
-                board[row][col]= Pawn(row,col,'w')
-            elif c == 'P':
-                board[row][col]= Pawn(row,col,'b')
-
-    for row in range(8):
-        for col in range(8):
+    range(8):
             if board[row][col] is None:
                 print(' ',end='')
             else:
