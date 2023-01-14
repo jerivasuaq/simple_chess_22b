@@ -7,4 +7,36 @@ if __name__ == '__main__':
     pw.move_to(2,1)
     pw.print()
 
-    print("Simple Chess")
+    txt_board = [
+        "        ",
+        "PPPPPPPP",
+        "        ",
+        "        ",
+        "        ",
+        "        ",
+        "        ",
+        "pppppppp",
+        "        ",
+    ]
+
+    board = []
+    for row in range(8):
+        board.append([None]*8) 
+
+    for row in range(8):
+        for col in range(8):
+            c = txt_board[row][col]
+            if c == 'p':
+                board[row][col]= Pawn(row,col,'w')
+            elif c == 'P':
+                board[row][col]= Pawn(row,col,'b')
+
+    for row in range(8):
+        for col in range(8):
+            if board[row][col] is None:
+                print(' ',end='')
+            else:
+                print(board[row][col],end='')
+        print()
+
+    print("🏁🏁🏁")

@@ -17,4 +17,13 @@ class Pawn(Piece):
         return False
 
     def print(self):
-        print('p')
+        print(self.__str__())
+
+    def __str__(self) -> str:
+        if self.colour=='w':
+            return '♟️'
+        else:
+            return '♙'
+
+    def __repr__(self):
+        return self.__str__()
