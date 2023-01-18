@@ -2,11 +2,10 @@
 SIMPLE CHESS
 ================================================
 
-![](/assets/images/chess.png)
+![.](https://github.com/jerivasuaq/simple_chess_22b/blob/main/chess.png)
 
 DESCRIPTION
 ------------------------------------------------
-
 This is a simple Chess, using OOP and terminal input/output.
 Here are the icons for each piece:
 
