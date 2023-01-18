@@ -1,4 +1,5 @@
 from pawn import Pawn
+from king import King
 
 class Board():
     board = []
@@ -26,6 +27,10 @@ class Board():
                 if c == 'p':
                     self.board[row][col]= Pawn(row,col,'w')
                 elif c == 'P':
+                    self.board[row][col]= Pawn(row,col,'b')
+                elif c == 'k':
+                    self.board[row][col]= Pawn(row,col,'w')
+                elif c == 'K':
                     self.board[row][col]= Pawn(row,col,'b')
 
     def __str__(self) -> str:
