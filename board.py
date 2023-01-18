@@ -1,6 +1,6 @@
 from pawn import Pawn
+from knight import Knight
 from rook import Rook
-
 
 class Board():
     board = []
@@ -27,12 +27,16 @@ class Board():
             for col in range(8):
                 c = txt_board[row][col]
                 if c == 'p':
-                    self.board[row][col] = Pawn(row, col, 'w')
-                if c == 'P':
-                    self.board[row][col] = Pawn(row, col, 'b')
-                if c == 'r':
+                    self.board[row][col]= Pawn(row,col,'w')
+                elif c == 'P':
+                    self.board[row][col]= Pawn(row,col,'b')
+                elif c == 'h':
+                    self.board[row][col]= Knight(row,col,'w')
+                elif c == 'H':
+                    self.board[row][col]= Knight(row,col,'b')
+                elif c == 'r':
                     self.board[row][col] = Rook(row, col, 'w')
-                if c == 'R':
+                elif c == 'R':
                     self.board[row][col] = Rook(row, col, 'b')
 
     def __str__(self) -> str:
