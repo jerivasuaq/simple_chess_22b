@@ -1,4 +1,5 @@
 from pawn import Pawn
+from knight import Knight
 
 class Board():
     board = []
@@ -7,7 +8,6 @@ class Board():
         txt_board = [
             "RHBQKBHR",
             "PPPPPPPP",
-            "        ",
             "        ",
             "        ",
             "        ",
@@ -27,6 +27,10 @@ class Board():
                     self.board[row][col]= Pawn(row,col,'w')
                 elif c == 'P':
                     self.board[row][col]= Pawn(row,col,'b')
+                elif c == 'h':
+                    self.board[row][col]= Knight(row,col,'w')
+                elif c == 'H':
+                    self.board[row][col]= Knight(row,col,'b')
 
     def __str__(self) -> str:
         s = ''
