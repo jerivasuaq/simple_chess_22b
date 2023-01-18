@@ -20,15 +20,7 @@ class King(Piece):
         originrlb = True
         check_arr = [(2,3), (1,5)]
         check = False
-    #     check_aux=[]
-    #     ch if self.row != 0 and self.row != 7 and self.col != 0 and self.col != 7:
-    #         for x in eck_status=False
-    #    range(self.row - 1, self.row + 1):
-    #             self.row=x
-    #             if self.row
-    #             for y in range(self.col - 1, self.col + 1):
-                    
-    #                 self.col=y
+
         if self.colour == 'w':
             if self.row == 0 and self.col == 4 and originkw == True: #checkin initial position of white king for castling
                 if self.col + 2 == col and check == False and originrrw == True: #kingside castling
