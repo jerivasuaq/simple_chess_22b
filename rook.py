@@ -6,12 +6,15 @@ class Rook(Piece):
 
     def move_to(self, row, col):
         if self.colour == 'w':
-            if self.row + 1 == row:
+            if (self.row + 1 == row or self.row - 1 == row) and (self.col + 1 == col or self.col - 1 == col):
                 self.row = row
+                self.col = col
                 return True
+
         else:
-            if self.row - 1 == row:
+            if (self.row + 1 == row or self.row - 1 == row) and (self.col + 1 == col or self.col - 1 == col):
                 self.row = row
+                self.col = col
                 return True
 
         return False
@@ -22,7 +25,7 @@ class Rook(Piece):
     def __str__(self) -> str:
         if self.colour=='w':
             return '♜'
-        else:
+        elif self.colour=='b':
             return '♖'
 
     def __repr__(self):
