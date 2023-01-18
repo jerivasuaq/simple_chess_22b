@@ -13,7 +13,7 @@ class Board():
             "        ",
             "        ",
             "pppppppp",
-            "rhbkqbhr",
+            "rhbqkbhr",
         ]
 
         self.board = []
@@ -28,9 +28,9 @@ class Board():
                 elif c == 'P':
                     self.board[row][col]= Pawn(row,col,'b')
                 elif c == 'k':
-                    self.board[row][col]= Pawn(row,col,'w')
+                    self.board[row][col]= King(row,col,'w')
                 elif c == 'K':
-                    self.board[row][col]= Pawn(row,col,'b')
+                    self.board[row][col]= King(row,col,'b')
 
     def __str__(self) -> str:
         s = ''

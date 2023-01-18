@@ -50,8 +50,8 @@ class King(Piece):
                         mov_col = col
             self.row == mov_row
             self.col == mov_col 
-            originkw = False   
-                
+            originkw = False 
+            return True
         else:
             if self.row == 7 and self.col == 4 and originkb == True: #checkin initial position of white king for castling
                 if self.col + 2 == col and check == False and originrlb == True: #kingside castling
@@ -64,8 +64,6 @@ class King(Piece):
                         mov_col = col #castle
                         mov_row = row
                         originrrb = False
-
-            
             if row - self.row <= 1 and col - self.col <= 1:
                 mov=[row,col]
                 for z in (len(check_arr)):
@@ -74,11 +72,10 @@ class King(Piece):
                         mov_col = col
             self.row == mov_row
             self.col == mov_col 
-            originkw = False             
-
-
-
+            originkw = False  
+            return True
         return False
+                 
 
     def print(self):
         print(self.__str__())
